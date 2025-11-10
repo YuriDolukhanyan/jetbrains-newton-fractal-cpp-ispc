@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     const float x_min = -2.0f, x_max = 2.0f;
     const float y_min = -2.0f, y_max = 2.0f;
 
-    // prepare n-th roots of unity
+    // prepare n-th roots
     std::vector<float> roots_real(n), roots_imag(n);
     for (int k = 0; k < n; ++k) {
         float angle = 2.0f * M_PI * k / n;
