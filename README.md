@@ -1,6 +1,6 @@
-# Newton Fractal (ISPC + C++)
+# Newton Fractal (ISPC & C++)
 
-This project generates a **Newton Fractal** image using the **ISPC (Intel SPMD Program Compiler)** for parallel computation and C++ for orchestration and image output.
+This project generates a **Newton Fractal** image using the **ISPC (Intel SPMD Program Compiler)** for parallel computation and C++ for serial part and image output.
 
 ---
 
