@@ -98,7 +98,7 @@ newton_n.ppm
 - The ISPC compiler performs the heavy numerical work in parallel.
 - The C++ code handles image generation, file writing, and root setup.
 - Adjust parameters (like `width`, `height`, and `max_iter`) in `main.cpp` to control image resolution and detail.
-- Typical runtime: a few seconds for 800×800 images.
+- Typical runtime: a few seconds for 1655×1655 images.
 ---
 
 ## Example
@@ -117,8 +117,8 @@ Newton fractal saved to newton_n.ppm
 ## Tested Environment
 
 - **Windows 10 / 11**
-- **ISPC 1.23.0**
-- **G++ (MinGW-w64) 12.2.0**
+- **ISPC 1.28.1**
+- **G++ (MinGW-w64) 13.2.0**
 - **C++17**
 
 ---
