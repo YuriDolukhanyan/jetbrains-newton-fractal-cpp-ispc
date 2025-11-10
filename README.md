@@ -77,14 +77,14 @@ You can specify the power `n` (number of roots) as a command-line argument:
 
 ```bash
 .
-ewton.exe n
+newton.exe n
 ```
 
 Example:
 
 ```bash
 .
-ewton.exe 7
+newton.exe 7
 ```
 
 If `n` is omitted, the default value is `n = 5`.
@@ -96,7 +96,7 @@ If `n` is omitted, the default value is `n = 5`.
 After execution, the program generates a file named:
 
 ```
-newton.ppm
+newton_n.ppm
 ```
 
 This is a **PPM image** that can be opened with many image viewers, or you can convert it to PNG/JPG using tools like ImageMagick:
@@ -122,7 +122,7 @@ magick convert newton.ppm newton.png
 ispc\bin\ispc.exe newton.ispc -o newton_ispc.obj -h newton_ispc.h
 g++ main.cpp newton_ispc.obj -o newton.exe
 .
-ewton.exe 5
+newton.exe 5
 ```
 
 Output:
@@ -130,10 +130,6 @@ Output:
 ```
 Newton fractal saved to newton.ppm
 ```
-
-Open `newton.ppm` to view your fractal!
-
----
 
 ## Tested Environment
 
