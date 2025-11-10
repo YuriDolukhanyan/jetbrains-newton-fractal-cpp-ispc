@@ -9,13 +9,13 @@ This project generates a **Newton Fractal** image using the **ISPC (Intel SPMD P
 The Newton fractal visualizes the convergence behavior of the **Newton–Raphson method** applied to the function:
 
 \[
-f(z) = z^n - 1
+\[f(z) = z^n - 1\]
 \]
 
 Each pixel corresponds to a complex number \( z \). The program iteratively applies:
 
 \[
-z_{k+1} = z_k - \frac{f(z_k)}{f'(z_k)}
+\[z_{k+1} = z_k - \frac{f(z_k)}{f'(z_k)}\]
 \]
 
 and colors the pixel based on which root \( z \) converges to and how many iterations it takes.
@@ -40,7 +40,7 @@ Make sure the following are installed and available in your system **PATH**:
 ├── newton.ispc         # ISPC kernel for computing the fractal
 ├── newton_ispc.h       # Generated ISPC header (auto-created)
 ├── newton_ispc.obj     # Generated ISPC object file (auto-created)
-├── newton.ppm          # Output fractal image (PPM format)
+├── images (folder)     # Output fractal images (PPM format (also added the PNG format))
 └── README.md
 ```
 
@@ -75,15 +75,9 @@ Make sure `newton_ispc.obj` and `newton_ispc.h` are in the same directory as `ma
 
 You can specify the power `n` (number of roots) as a command-line argument:
 
-```bash
-.
-newton.exe n
-```
-
 Example:
 
 ```bash
-.
 newton.exe 7
 ```
 
@@ -121,7 +115,6 @@ magick convert newton.ppm newton.png
 ```bash
 ispc\bin\ispc.exe newton.ispc -o newton_ispc.obj -h newton_ispc.h
 g++ main.cpp newton_ispc.obj -o newton.exe
-.
 newton.exe 5
 ```
 
@@ -139,7 +132,3 @@ Newton fractal saved to newton.ppm
 - **C++17**
 
 ---
-
-## 🧑‍💻 Credits
-
-Created for an assignment on Newton fractals using **ISPC** and **C++**.
