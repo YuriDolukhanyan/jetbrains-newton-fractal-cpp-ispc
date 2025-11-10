@@ -8,15 +8,15 @@ This project generates a **Newton Fractal** image using the **ISPC (Intel SPMD P
 
 The Newton fractal visualizes the convergence behavior of the **Newton–Raphson method** applied to the function:
 
-\[
-\[f(z) = z^n - 1\]
-\]
+$$
+f(z) = z^n - 1
+$$
 
 Each pixel corresponds to a complex number \( z \). The program iteratively applies:
 
-\[
-\[z_{k+1} = z_k - \frac{f(z_k)}{f'(z_k)}\]
-\]
+$$
+z_{k+1} = z_k - \frac{f(z_k)}{f'(z_k)}
+$$
 
 and colors the pixel based on which root \( z \) converges to and how many iterations it takes.
 
@@ -121,7 +121,7 @@ newton.exe 5
 Output:
 
 ```
-Newton fractal saved to newton.ppm
+Newton fractal saved to newton_n.ppm
 ```
 
 ## Tested Environment
