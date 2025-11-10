@@ -78,7 +78,7 @@ You can specify the power `n` (number of roots) as a command-line argument:
 Example:
 
 ```bash
-newton.exe 7
+.\newton.exe 7
 ```
 
 If `n` is omitted, the default value is `n = 5`.
@@ -93,21 +93,12 @@ After execution, the program generates a file named:
 newton_n.ppm
 ```
 
-This is a **PPM image** that can be opened with many image viewers, or you can convert it to PNG/JPG using tools like ImageMagick:
-
-```bash
-magick convert newton.ppm newton.png
-```
-
----
-
 ## Notes
 
 - The ISPC compiler performs the heavy numerical work in parallel.
 - The C++ code handles image generation, file writing, and root setup.
 - Adjust parameters (like `width`, `height`, and `max_iter`) in `main.cpp` to control image resolution and detail.
 - Typical runtime: a few seconds for 800×800 images.
-
 ---
 
 ## Example
@@ -117,7 +108,6 @@ ispc\bin\ispc.exe newton.ispc -o newton_ispc.obj -h newton_ispc.h
 g++ main.cpp newton_ispc.obj -o newton.exe
 newton.exe 5
 ```
-
 Output:
 
 ```
